@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HomeMenu() {
 	return (
 		<section>
-			<div className="absolute h-full left-0 right-0 w-full justify-start overflow-x-hidden">
+			<div className="absolute h-full left-0 right-0 w-full justify-start">
 				<div className="h-48 w-48 absolute -left-12 text-left">
 					<Image
 						src={"/sallad1.png"}
