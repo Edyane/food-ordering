@@ -1,9 +1,10 @@
 import Image from "next/image";
+import MenuItem from "../menu/MenuItem";
 
 export default function HomeMenu() {
 	return (
 		<section className="">
-			<div className="absolute h-full left-0 right-0 w-full justify-start">
+			<div className="absolute left-0 right-0 w-full justify-start">
 				<div className="absolute left-0 -top-[70px] text-left -z-10">
 					<Image
 						src={"/sallad1.png"}
@@ -21,23 +22,19 @@ export default function HomeMenu() {
 					/>
 				</div>
 			</div>
-			<div className="text-center">
+			<div className="text-center mb-4">
 				<h3 className="uppercase text-gray-600 font-semibold leading-4">
 					Check out
 				</h3>
 				<h2 className="text-primary font-bold text-4xl italic">Menu</h2>
 			</div>
 			<div className="grid grid-cols-3 gap-4">
-				<div className="bg-gray-300 p-4 rounded-lg text-center">
-					<img src="" alt="pizza" />
-					<h4 className="font-semibold my-2">Pepperoni Pizza</h4>
-					<p className="text-gray-500 text-sm">
-						lorem ipsum dolor sit amet
-					</p>
-					<button className="bg-primary text-white rounded-full px-6 py-2">
-						Add to cart
-					</button>
-				</div>
+				<MenuItem />
+				<MenuItem />
+				<MenuItem />
+				<MenuItem />
+				<MenuItem />
+				<MenuItem />
 			</div>
 		</section>
 	);
