@@ -14,12 +14,12 @@ export default function LoginPage() {
 			headers: {'Content-Type': 'application/json'},
 			method: 'POST',
 		});
-		await Signika_Negative('Credentials')
+		await signIn('credentials')
 		setLoginInProgress(false);
 	}
 
 	return (
-		<section className="mt-8">
+		<section className="mt-8" onSubmit={handleFormSubmit}>
 			<h1 className="text-center text-primary text-4xl mb-4">Login</h1>
 			<form className="block max-w-xs mx-auto" method="POST" action="/api/auth">
 				<input
