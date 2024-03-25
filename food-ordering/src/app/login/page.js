@@ -4,18 +4,13 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function LoginPage() {
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
 	const [loginInProgress, setLoginInProgress] = useState(false);
 
 	async function handleFormSubmit(e) {
 		e.preventDefault();
 		setLoginInProgress(true);
-		// const {ok} = await fetch('/api/login', { 
-		// 	body: JSON.stringify({email, password}),
-		// 	headers: {'Content-Type': 'application/json'},
-		// 	method: 'POST',
-		// });
 		await signIn('credentials', {email, password});
 		setLoginInProgress(false);
 	}
